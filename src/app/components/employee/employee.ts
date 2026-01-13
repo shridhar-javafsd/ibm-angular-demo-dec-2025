@@ -1,18 +1,24 @@
 import { CommonModule } from '@angular/common';
-
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Department } from '../department/department';
-
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
-  imports: [RouterOutlet, CommonModule, Department],
+  imports: [RouterOutlet, CommonModule, FormsModule, Department],
   templateUrl: './employee.html',
   styleUrl: './employee.css',
 })
+
 export class Employee {
+
   empData = { id: 101, name: 'Sonu', salary: 10.50 }
+  isDisabled = false;
+  username = '';
+
+  onClickFunction = () => { alert('Button clicked!'); };
+
 }
 
 

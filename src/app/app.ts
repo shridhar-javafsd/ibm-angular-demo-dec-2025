@@ -10,9 +10,6 @@ import { Employee } from './components/employee/employee';
 })
 export class App {
   protected readonly title = signal('ibm-angular-demo');
-
-  firstName: string = 'Sonu';
-
 }
 
 

@@ -1,8 +1,36 @@
 <div>
     <h1>Employee Component</h1>
     <p>This is from Employee component.</p>
+    <h4>Data Bilding in Angular</h4>
+    <p>Data to and fro compoment and template can be shared in many ways. This is called as data binding. </p>
+    <p>Types of Data Binding in Angular:</p>
+    <ol>
+        <li>String interpopation {{ '{{ expression }}' }} - Component to Template </li>
+        - display component data in the template.
+        <li>Property Binding - [property]="expression" - Component to Template -</li>
+        - bind a component property to an HTML element property
+        <li>Event Binding - Template to Component</li>
+        - send data or trigger logic from UI to component
+        <li>Two Way Bilding - [(ngModel)]="property" </li>
+        - Combination of property + event binding.
+    </ol>
+    <hr />
+    <h4>Interpolation</h4>
+    <p> {{empData.name}} </p>
+    <h4>Property Binding</h4>
+    <button [disabled]="isDisabled">Click me</button>
+    <h4>Event Binding</h4>
+    <button (click)="onClickFunction()">Click Me</button>
+    <h4>Two Way Binding</h4>
+    <input [(ngModel)]="username">
+    <p>{{ username }}</p>
+    <hr />
+    <h4>Angular Pipes</h4>
+    <p>Angular pipes are used to format data in template.</p>
     <p> Id: {{ empData.id }}, Name: {{ empData.name | uppercase }},
         Salary: {{ empData.salary | currency : 'INR' }} </p>
+    <p>// use other pipes also
+    </p>
     <hr />
     <app-department></app-department>
 </div>
