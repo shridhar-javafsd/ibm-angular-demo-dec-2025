@@ -1,5 +1,7 @@
 <div>
     <h1>Employee Component</h1>
     <p>This is from Employee component.</p>
+    <p> Id: {{ empData.id }}, Name: {{ empData.name | uppercase }}, Salary: {{ empData.salary | currency : 'INR' }} </p>
     <hr />
+    <app-department></app-department>
 </div>
