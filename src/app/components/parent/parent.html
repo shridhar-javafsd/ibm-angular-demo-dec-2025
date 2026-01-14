@@ -1,9 +1,16 @@
 <div>
-    <h4 >Parent Component</h4>
+    <h4>Parent Component</h4>
 
     <p>Parent data in parent component:{{ parentDataInParentComponent }}</p>
 
     <p>Child data in parent component: {{ childDataInParentComponent }}</p>
 
-    <app-child [parentDataInChildComponent]="parentDataInParentComponent" [passHere]="thisData" ></app-child>
+    <!-- <app-child [parentDataInChildComponent]="parentDataInParentComponent" ></app-child> -->
+
+    <!-- <app-child [parentDataInChildComponent]="parentDataInParentComponent" [passHere]="thisData" ></app-child> -->
+
+    <app-child [parentDataInChildComponent]="parentDataInParentComponent" [passHere]="thisData"
+        (pass)="getDataFromChild($event)">></app-child>
+
+
 </div>

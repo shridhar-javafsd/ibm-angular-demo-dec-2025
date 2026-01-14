@@ -16,4 +16,8 @@ export class Parent {
 
   childDataInParentComponent = '';
 
+  getDataFromChild = (data: string) => {
+    this.childDataInParentComponent = data;
+  };
+
 }

@@ -18,4 +18,14 @@ export class Child {
   passHere = 0;
 
 
+  @Output()
+  pass = new EventEmitter<string>();
+
+  sendDataToParent() {
+    this.pass.emit(this.childDataInChildComponent);
+  }
+
+
+
+
 }
