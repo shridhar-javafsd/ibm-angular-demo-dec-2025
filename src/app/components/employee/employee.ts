@@ -14,7 +14,9 @@ import { FormsModule } from '@angular/forms';
 export class Employee {
 
   empData = { id: 101, name: 'Sonu', salary: 10.50 }
-  isDisabled = false;
+
+  isDisabled = true;
+
   username = '';
 
   onClickFunction = () => { alert('Button clicked!'); };
