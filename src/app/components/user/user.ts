@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../services/user-service';
+import { UserService } from '../../services/user-service';
 
 
 @Component({
@@ -11,14 +11,14 @@ import { UserService } from '../services/user-service';
 })
 export class User {
 
-    username: string = '';
+  username: string = '';
 
-  constructor( private service: UserService ) {}
+  constructor(private service: UserService) { }
 
   clickToGetUserData = () => {
     this.service.getUserData().subscribe((response: any) => {
       console.log(response);
-      this.username = response.data.username;
+      this.username = response.username;
 
     });
   };
