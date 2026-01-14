@@ -34,7 +34,7 @@
     <hr />
     <h4>Angular Directives</h4>
     <button (click)="showOrHide()">Show or Hide</button>
-    <p>Show or Hide <span  >Show</span></p>
+    <p>Show or Hide: <span *ngIf="shouldShowOrHide">Show</span></p>
 
     <hr />
     <app-department></app-department>

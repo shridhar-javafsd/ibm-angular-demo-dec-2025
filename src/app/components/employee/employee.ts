@@ -13,6 +13,12 @@ import { FormsModule } from '@angular/forms';
 
 export class Employee {
 
+  shouldShowOrHide: boolean = false;
+
+  showOrHide = () => {
+    this.shouldShowOrHide = !this.shouldShowOrHide;
+  };
+
   empData = { id: 101, name: 'Sonu', salary: 10.50 }
 
   isDisabled = true;
