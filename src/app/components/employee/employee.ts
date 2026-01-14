@@ -13,6 +13,12 @@ import { FormsModule } from '@angular/forms';
 
 export class Employee {
 
+  employees = [
+    { id: 101, name: 'Sonu', salary: 10.50 },
+    { id: 102, name: 'Monu', salary: 12.25 },
+    { id: 103, name: 'Tonu', salary: 11.75 },
+    { id: 104, name: 'Ponu', salary: 11.25 }];
+
   shouldShowOrHide: boolean = false;
 
   showOrHide = () => {
@@ -20,6 +26,8 @@ export class Employee {
   };
 
   empData = { id: 101, name: 'Sonu', salary: 10.50 }
+
+
 
   isDisabled = true;
 
