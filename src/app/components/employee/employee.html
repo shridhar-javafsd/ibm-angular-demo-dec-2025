@@ -33,9 +33,58 @@
     </p>
     <hr />
     <h4>Angular Directives</h4>
+    <p>In Angular, directives are special instructions
+        in the DOM that tell Angular how to
+        modify the structure, appearance, or behavior of HTML elements.
+    </p>
+    <p>Angular has three main types of directives</p>
+    <ul>
+        <li>Component Directives</li>
+        <li>Structural Directives</li>
+        <li>Attribute Directives</li>
+    </ul>
+    <h3>Component Directives</h3>
+    <p>Components are actually directives with a template</p>
+
+    <h3>Structural Directives</h3>
+    <p>Change the DOM structure</p>
+    <p>*e.g. ngIf, *ngFor, *ngSwitch</p>
+
+    <h3>Attribute Directives</h3>
+    <p>Change the appearance or behavior of an element</p>
+    <p>e.g. ngClass, ngStyle, ngModel</p>
+
+    <h3>Examples:</h3>
+
     <button (click)="showOrHide()">Show or Hide</button>
     <p>Show or Hide: <span *ngIf="shouldShowOrHide">Show</span></p>
-
+    <p>List of the Employees</p>
+    <div>
+        <p *ngFor="let emp of employees">
+            Id: {{ emp.id }},
+            Name: {{ emp.name }},
+            Salary: {{ emp.salary }}
+        </p>
+    </div>
     <hr />
+
+    <div>
+        <h4>Sharing Data Beween Components</h4>
+        <p>Components share parent-child relationship.
+            Data can be send from parent to child and vice versa.
+        </p>
+        <h3>From parent to child</h3>
+        <p>Using </p>
+        <h3>From child to parent</h3>
+        <p>Using </p>
+    </div>
+    <div>
+        <h4>Routing in Angular</h4>
+        <p>Routing allows you to create multiple "pages" in your app.</p>
+    </div>
+    <div>
+        <h4>Consuming backend APIs in Angular</h4>
+        <p>Angular can consume REST, SOAP and GraphQL APIs.</p>
+    </div>
     <app-department></app-department>
 </div>
