@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// import { RouterOutlet } from '@angular/router';
 import { Department } from '../department/department';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-employee',
-  imports: [RouterOutlet, CommonModule, FormsModule, Department],
+  imports: [CommonModule, FormsModule, Department],
   templateUrl: './employee.html',
   styleUrl: './employee.css',
 })
@@ -17,7 +17,7 @@ export class Employee {
 
   isDisabled = true;
 
-  username = '';
+  username = ''; // this 
 
   onClickFunction = () => { alert('Button clicked!'); };
 

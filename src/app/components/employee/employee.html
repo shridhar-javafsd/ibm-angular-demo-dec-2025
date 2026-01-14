@@ -5,7 +5,7 @@
     <p>Data to and fro compoment and template can be shared in many ways. This is called as data binding. </p>
     <p>Types of Data Binding in Angular:</p>
     <ol>
-        <li>String interpopation {{ '{{ expression }}' }} - Component to Template </li>
+        <li>Interpopation {{ '{{ expression }}' }} - Component to Template </li>
         - display component data in the template.
         <li>Property Binding - [property]="expression" - Component to Template -</li>
         - bind a component property to an HTML element property
@@ -18,7 +18,7 @@
     <h4>Interpolation</h4>
     <p> {{empData.name}} </p>
     <h4>Property Binding</h4>
-    <button [disabled]="isDisabled" >Click me</button>
+    <button [disabled]="isDisabled">Click me</button>
     <h4>Event Binding</h4>
     <button (click)="onClickFunction()">Click Me</button>
     <h4>Two Way Binding</h4>
@@ -31,6 +31,11 @@
         Salary: {{ empData.salary | currency : 'INR' }} </p>
     <p>// use other pipes also
     </p>
+    <hr />
+    <h4>Angular Directives</h4>
+    <button (click)="showOrHide()">Show or Hide</button>
+    <p>Show or Hide <span  >Show</span></p>
+
     <hr />
     <app-department></app-department>
 </div>
