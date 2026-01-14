@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class User {
 
   userid: number = 0;
+
   username = signal('');
 
   constructor(private service: UserService) { }
@@ -20,7 +21,7 @@ export class User {
       console.log(response); // working 
       console.log(response.username); // working 
       console.log(this.username());
-      this.username.set(response.username);
+      this.username.set(response.username); // working 
     });
   };
 }
