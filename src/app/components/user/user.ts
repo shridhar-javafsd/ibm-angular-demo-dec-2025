@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { UserService } from '../../services/user-service';
 import { FormsModule } from '@angular/forms';
-
 
 @Component({
   selector: 'app-user',
@@ -12,18 +11,18 @@ import { FormsModule } from '@angular/forms';
 export class User {
 
   userid: number = 0;
-  username: string = '';
+  username = signal('');
 
   constructor(private service: UserService) { }
 
   clickToGetUserData = () => {
     this.service.getUserData(this.userid).subscribe((response: any) => {
-      console.log(response);
-      this.username = response.username;
-
+      console.log(response); // working 
+      console.log(response.username); // working 
+      console.log(this.username());
+      this.username.set(response.username);
     });
   };
-
 }
 
 
