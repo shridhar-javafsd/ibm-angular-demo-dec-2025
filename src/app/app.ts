@@ -16,3 +16,22 @@ export class App {
 // component to template =
 // 1.  {{ string interpolation }}
 // 2, 3, 4,
+
+// app structure
+// components
+// directives
+// routing
+// httpClient
+// decorators 
+
+// ng generate service services/user/user-service
+// ng generate service services/ride/ride-service
+
+// ng generate component components/user
+// ng generate component components/ride
+
+// team-1
+// backend (NodeJS express project)
+// frontend-1 (HTML CSS JS Project)
+// frontend-ng (Angular project)
+// other-stuff (documentation, txt files, images etc)
