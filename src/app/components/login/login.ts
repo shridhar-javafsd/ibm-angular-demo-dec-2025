@@ -12,7 +12,7 @@ import { UserService } from '../../services/user-service';
 })
 export class Login {
 
-  user: User | any = signal({});
+  user: User = {};
   loggedInUser?: User | any = signal({});
   errorMessage?: string | any = signal('');
 
@@ -24,18 +24,18 @@ export class Login {
       if (this.user?.username === response?.username && this.user?.password === response?.username) {
         console.log(response);
         this.errorMessage.set('');
-        this.user.set({});
+        this.user = {};
         this.loggedInUser.set(response);
         console.log(response);
-        console.log(this.user());
+        console.log(this.user);
         console.log(this.loggedInUser());
       } else {
         console.log(response);
-        this.user.set({});
+        this.user = {};
         this.loggedInUser.set({});
         this.errorMessage.set('Invalid username');
         console.log(response);
-        console.log(this.user());
+        console.log(this.user);
         console.log(this.loggedInUser());
         console.error(this.errorMessage());
       }
