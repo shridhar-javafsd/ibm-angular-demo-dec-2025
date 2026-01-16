@@ -7,10 +7,11 @@
 
     <button (click)="login()">Login</button>
 
-    <div *ngIf="loggedInUser">
+    <ng-container *ngIf="loggedInUser().username; else errorTpl">
         <p>Welcome, {{ loggedInUser().username }}</p>
-    </div>
-    <div *ngIf="errorMessage">
+    </ng-container>
+    <ng-template #errorTpl>
         <p>{{ errorMessage() }}</p>
-    </div>
+    </ng-template>
+
 </div>

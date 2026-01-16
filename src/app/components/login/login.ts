@@ -12,22 +12,32 @@ import { UserService } from '../../services/user-service';
 })
 export class Login {
 
-  // use signal here 
-  user: User = {};
-  // loggedInUser?: User;
+  user: User | any = signal({});
   loggedInUser?: User | any = signal({});
   errorMessage?: string | any = signal('');
 
   constructor(private userService: UserService) { }
 
   login() {
-    this.userService.login(this.user).subscribe(result => {
-      if (result) {
-        this.loggedInUser.set(result);
-        console.log('Login successful', result);
+    console.log('login');
+    this.userService.login(this.user).subscribe(response => {
+      if (this.user?.username === response?.username && this.user?.password === response?.username) {
+        console.log(response);
+        this.errorMessage.set('');
+        this.user.set({});
+        this.loggedInUser.set(response);
+        console.log(response);
+        console.log(this.user());
+        console.log(this.loggedInUser());
       } else {
+        console.log(response);
+        this.user.set({});
+        this.loggedInUser.set({});
         this.errorMessage.set('Invalid username');
-        console.error(this.errorMessage);
+        console.log(response);
+        console.log(this.user());
+        console.log(this.loggedInUser());
+        console.error(this.errorMessage());
       }
     });
   }
