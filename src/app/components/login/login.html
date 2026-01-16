@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div>
+    <h3>Login</h3>
+    <input type="text" placeholder="Username" [(ngModel)]="user.username" />
+    <br /><br />
+    <input type="password" placeholder="Password" [(ngModel)]="user.password" />
+    <br /><br />
+
+    <button (click)="login()">Login</button>
+
+    <div *ngIf="loggedInUser">
+        <p>Welcome, {{ loggedInUser?.username }}</p>
+    </div>
+    <div *ngIf="errorMessage">
+        <p>{{ errorMessage }}</p>
+    </div>
+</div>

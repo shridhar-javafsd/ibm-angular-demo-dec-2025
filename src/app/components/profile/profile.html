@@ -1,0 +1,23 @@
+<div>
+    <h3>View Profile</h3>
+
+    <input type="number" placeholder="User ID" [(ngModel)]="userId" />
+    <button (click)="viewProfile()">View</button>
+
+    <div *ngIf="profile">
+        <h4>{{ profile.name }}</h4>
+        <p>Username: {{ profile.username }}</p>
+        <p>Email: {{ profile.email }}</p>
+        <p>Phone: {{ profile.phone }}</p>
+
+        <h5>Address</h5>
+        <p>
+            {{ profile.address.street }},
+            {{ profile.address.city }}
+        </p>
+
+        <h5>Company</h5>
+        <p>{{ profile.company.name }}</p>
+    </div>
+
+</div>

@@ -17,7 +17,7 @@ export class User {
   constructor(private service: UserService) { }
 
   clickToGetUserData = () => {
-    this.service.getUserData(this.userid).subscribe((response: any) => {
+    this.service.getUserById(this.userid).subscribe((response: any) => {
       console.log(response); // working 
       console.log(response.username); // working 
       console.log(this.username());
