@@ -8,9 +8,9 @@
     <button (click)="login()">Login</button>
 
     <div *ngIf="loggedInUser">
-        <p>Welcome, {{ loggedInUser?.username }}</p>
+        <p>Welcome, {{ loggedInUser().username }}</p>
     </div>
     <div *ngIf="errorMessage">
-        <p>{{ errorMessage }}</p>
+        <p>{{ errorMessage() }}</p>
     </div>
 </div>

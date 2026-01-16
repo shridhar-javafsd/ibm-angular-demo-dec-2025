@@ -12,6 +12,7 @@ import { UserService } from '../../services/user-service';
 })
 export class Register {
 
+  //  // use signal here 
   user: User = {};
   registeredUser?: User;
 
