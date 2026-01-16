@@ -30,6 +30,9 @@ export class App {
 // ng generate component components/user
 // ng generate component components/ride
 
+// ng generate interface models/user
+// ng generate interface models/ride
+
 // team-1
 // backend (NodeJS express project)
 // frontend-1 (HTML CSS JS Project)
